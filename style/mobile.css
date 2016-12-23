@@ -1,0 +1,121 @@
+* {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+html{
+	min-width: 320px;
+}
+
+body{
+	min-width: 320px;
+}
+
+header{
+	width: 100%;
+	height: 50px;
+	background-color: #212121;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	box-shadow: 0px 0px 5px 0px #000000;
+}
+
+#searchInput{
+	width: 50%;
+	padding: 5px 10px 5px 10px;
+	height: 20px;
+	font-size: 15px;
+	background-color: #212121;
+	border: 0px solid transparent;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#mainContainer{
+	min-width: 320px;
+	padding-top: 65px;
+	padding-bottom: 15px;
+	background-color: whitesmoke;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	background-color: #757575;
+}
+
+.collection{
+	width: 100%;
+	margin: 15px 0px 15px 0px;
+	background-color: #424242;
+}
+
+.colTitle, .colBuyer, .colBonuses{
+	font-family: 'Open Sans', sans-serif;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.colTitle{
+	font-size: 20px;
+	line-height: 25px;
+}
+
+.colBuyer, .colBonuses{
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.colCars{
+	width: calc(100% - 20px);
+	padding: 10px 10px 10px 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	align-content: flex-start;
+	justify-content: flex-end;
+}
+
+.colCar{
+	min-width: 150px;
+	width: 50%;
+}
+
+.colCarName, .colCarPlate{
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	line-height: 15px;
+	color: #FFFFFF;
+}
+
+.colCarImage{
+	width: 100%;
+	height: auto;
+}
+
+footer{
+	width: 100%;
+	background-color: #212121;
+}
+
+.fText{
+	font-family: 'Open Sans', sans-serif;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 12px;
+	line-height: 25px;
+}
+
+.fText a{
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	color: #3F51B5;
+}
