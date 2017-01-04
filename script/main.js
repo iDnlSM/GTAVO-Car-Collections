@@ -23,7 +23,7 @@ var plates = [
 	"PR3TTY",
 	"W1D3B0D",
 	"1985",
-	"N0F00L",
+	"NOF00L",
 	"SN0WFLK3",
 	"DR1FT3R",
 	"R4LLY",
