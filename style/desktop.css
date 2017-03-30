@@ -1,121 +1,162 @@
-* {
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
+*{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
 }
 
-html{
-	min-width: 320px;
-}
-
-body{
-	min-width: 320px;
+html, body{
+	height: 100%;
 }
 
 header{
-	width: 100%;
+	width: 25%;
 	height: 50px;
 	background-color: #212121;
 	position: fixed;
+	top: 0px;
+	left: 0px;
 	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
 	align-items: center;
 	align-content: center;
 	justify-content: center;
-	box-shadow: 0px 0px 5px 0px #000000;
+	box-shadow: 0px 0px 5px 0px #212121;
+	z-index: 3;
 }
 
-#searchInput{
-	width: 50%;
-	padding: 5px 10px 5px 10px;
-	height: 20px;
-	font-size: 15px;
-	background-color: #212121;
-	border: 0px solid transparent;
-	color: #FFFFFF;
-	text-transform: uppercase;
+#shMenu{
+	visibility: hidden;
+}
+
+#search{
+	width: calc(100% - 100px);
 	text-align: center;
+	text-transform: uppercase;
+	height: 25px;
+	padding: 12.5px 50px 12.5px 50px;
+	background-color: #212121;
+	line-height: 25px;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: #FFFFFF;
+	border-width: 0px;
+	background-image: url(../image/search.svg);
+	background-size: 25px 25px;
+	background-position: 12.5px 12.5px;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	transition-duration: 250ms;
+	transition-timing-function: ease-in-out;
+	transition-property: opacity;
+}
+
+#search:focus{
+	outline: none;
+	opacity: 1;
+}
+
+#menu{
+	position: fixed;
+	top: 50px;
+	width: 25%;
+	height: calc(100% - 50px);
+	background-color: #424242;
+	box-shadow: 0px 0px 5px 0px #424242;
+	z-index: 2;
+}
+
+#menu .mText, #menu .mLink{
+	color: #FFFFFF;
+	width: calc(100% - 50px);
+	line-height: 25px;
+	padding: 12.5px 25px 12.5px 25px;
+	font-family: 'Roboto', sans-serif;
+	opacity: 0.5;
+	user-select: none;
+}
+
+#menu .mText{
+	cursor: default;
+}
+
+#menu .mLink{
+	cursor: pointer;
+}
+
+#menu .mText:hover, #menu .mLink:hover{
+	background-color: #212121;
+	box-shadow: 0px 0px 5px 0px #212121;
+	opacity: 1;
 }
 
 #mainContainer{
-	min-width: 320px;
-	padding-top: 65px;
-	padding-bottom: 15px;
-	background-color: whitesmoke;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
+	position: fixed;
+	top: 0px;
+	left: 25%;
+	width: 75%;
+	height: 100%;
 	background-color: #616161;
+	z-index: 1;
+	overflow-y: auto;
 }
 
 .collection{
-	width: 100%;
-	margin: 15px 0px 15px 0px;
-	background-color: #424242;
-}
-
-.colTitle, .colBuyer, .colBonuses{
-	font-family: 'Open Sans', sans-serif;
-	color: #FFFFFF;
-	text-align: center;
-}
-
-.colTitle{
-	font-size: 20px;
-	line-height: 25px;
-}
-
-.colBuyer, .colBonuses{
-	font-size: 15px;
-	line-height: 20px;
-}
-
-.colCars{
-	width: calc(100% - 20px);
-	padding: 10px 10px 10px 10px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	align-items: stretch;
-	align-content: flex-start;
-	justify-content: flex-end;
 }
 
-.colCar{
-	min-width: 150px;
-	width: 50%;
-}
-
-.colCarName, .colCarPlate{
-	font-family: 'Roboto', sans-serif;
-	font-size: 12px;
-	line-height: 15px;
+.collection .colname, .collection .buyer, .collection .bonus, .collection .drivers{
+	width: 25%;
+	height: 50px;
+	line-height: 50px;
 	color: #FFFFFF;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
 }
 
-.colCarImage{
+.collection .cars{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	align-content: flex-start;
+	justify-content: flex-start;
+}
+
+.collection .cars .car{
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	align-content: flex-start;
+	justify-content: flex-start;
+}
+
+.collection .cars .car .name{
+	position: absolute;
+	top: 12.5px;
+	left: 12.5px;
+	font-size: 15px;
+	line-height: 20px;
+	background-color: #FFFFFF;
+	padding: 5px 10px 5px 10px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.collection .cars .car .plate{
+	position: absolute;
+	right: 12.5px;
+	bottom: 12.5px;
+	font-size: 15px;
+	line-height: 20px;
+	background-color: #FFFFFF;
+	padding: 5px 10px 5px 10px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.collection .cars .car .image{
 	width: 100%;
 	height: auto;
-}
-
-footer{
-	width: 100%;
-	background-color: #212121;
-}
-
-.fText{
-	font-family: 'Open Sans', sans-serif;
-	color: #FFFFFF;
-	text-align: center;
-	font-size: 12px;
-	line-height: 25px;
-}
-
-.fText a{
-	text-decoration: none;
-	font-family: 'Roboto', sans-serif;
-	color: #3F51B5;
 }

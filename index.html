@@ -1,270 +1,31 @@
 <!DOCTYPE HTML>
-<html lang="pt-BR">
+<html lang="en">
 	<head>
-		<title>GTAVO Car Collections</title>
+		<title>GTA Online Import/Export Car Collections</title>
 		<meta charset="utf-8">
 		<meta name="author" content="Daniel Mendes">
 		<meta name="description" content="GTA V Online Import/Export DLC's Car Collections">
-		<meta name="keywords" content="GTA,V,Online,Import,Export,DLC,Car,Collections">
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+		<meta name="keywords" content="GTA,V,5,Online,Import,Export,I,E,I/E,DLC,Car,Collections">
 		<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 1 Jan 2018 00:00:00 GMT">
-		<script async type="text/javascript" src="script/main.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="./style/desktop.css" media="only screen and (min-width: 1366px)">
+		<link rel="stylesheet" href="./style/mobile.css" media="only screen and (max-width: 1365px)">
+		<link rel="stylesheet" href="./style/font.css">
+		<script src="./script/main.js"></script>
 	</head>
 	<body>
 		<header>
-			<input id="searchInput" type="text" placeholder="Procurar Placa..." oninput="searchPlate()">
+			<div id="shMenu"></div>
+			<input type="text" id="search" placeholder="Search" autocomplete="off">
 		</header>
-		<div id="mainContainer">
-			<div class="collection">
-				<p class="colTitle">Insegurável</p>
-				<p class="colBuyer">Jay Norris</p>
-				<p class="colBonuses">$35,000</p>
-				<div class="colCars">
-					<div class="colCar" id="M4K3B4NK">
-						<p class="colCarName">X80 proto</p>
-						<p class="colCarPlate">M4K3B4NK</p>
-						<img class="colCarImage" src="image/car/x80proto.jpg">
-					</div>
-					<div class="colCar" id="D3V1L">
-						<p class="colCarName">T20</p>
-						<p class="colCarPlate">D3V1L</p>
-						<img class="colCarImage" src="image/car/t20.jpg">
-					</div>
-					<div class="colCar" id="SL33K">
-						<p class="colCarName">Osiris</p>
-						<p class="colCarPlate">SL33K</p>
-						<img class="colCarImage" src="image/car/osiris.jpg">
-					</div>
-				</div>
-			</div>
-
-			<div class="collection">
-				<p class="colTitle">Tropicália</p>
-				<p class="colBuyer">Curtis Cray Esq</p>
-				<p class="colBonuses">$50,000</p>
-				<div class="colCars">
-					<div class="colCar" id="BUZZ3D">
-						<p class="colCarName">Cheetah</p>
-						<p class="colCarPlate">BUZZ3D</p>
-						<img class="colCarImage" src="image/car/cheetah.jpg">
-					</div>
-					<div class="colCar" id="C1TRUS">
-						<p class="colCarName">Tyrus</p>
-						<p class="colCarPlate">C1TRUS</p>
-						<img class="colCarImage" src="image/car/tyrus.jpg">
-					</div>
-					<div class="colCar" id="C4TCHM3">
-						<p class="colCarName">FMJ</p>
-						<p class="colCarPlate">C4TCHM3</p>
-						<img class="colCarImage" src="image/car/fmj.jpg">
-					</div>
-					<div class="colCar" id="OV3RFL0D">
-						<p class="colCarName">Enity XF</p>
-						<p class="colCarPlate">0V3RFL0D</p>
-						<img class="colCarImage" src="image/car/enityxf.jpg">
-					</div>
-				</div>
-			</div>
-
-			<div class="collection">
-				<p class="colTitle">Poder Imaginário</p>
-				<p class="colBuyer">Keith Collins MD</p>
-				<p class="colBonuses">$20,000</p>
-				<div class="colCars">
-					<div class="colCar" id="V1NT4GE">
-						<p class="colCarName">Coquette BlackFin</p>
-						<p class="colCarPlate">V1NT4GE</p>
-						<img class="colCarImage" src="image/car/coquetteblackfin.jpg">
-					</div>
-					<div class="colCar" id="TH370S">
-						<p class="colCarName">Nightshade</p>
-						<p class="colCarPlate">TH370S</p>
-						<img class="colCarImage" src="image/car/nightshade.jpg">
-					</div>
-				</div>
-			</div>
-
-			<div class="collection">
-				<p class="colTitle">Balada</p>
-				<p class="colBuyer">DJ Playlist</p>
-				<p class="colBonuses">$35,000</p>
-				<div class="colCars">
-					<div class="colCar" id="P0W3RFUL">
-						<p class="colCarName">Feltzer</p>
-						<p class="colCarPlate">P0W3RFUL</p>
-						<img class="colCarImage" src="image/car/feltzer.jpg">
-					</div>
-					<div class="colCar" id="SL1CK">
-						<p class="colCarName">811</p>
-						<p class="colCarPlate">SL1CK</p>
-						<img class="colCarImage" src="image/car/811.jpg">
-					</div>
-					<div class="colCar" id="BE4STY">
-						<p class="colCarName">Bestia GTS</p>
-						<p class="colCarPlate">BE4STY</p>
-						<img class="colCarImage" src="image/car/bestiagts.jpg">
-					</div>
-				</div>
-			</div>
-
-			<div class="collection">
-				<p class="colTitle">Declasse Alta</p>
-				<p class="colBuyer">Ms. M Schultz</p>
-				<p class="colBonuses">$35,000</p>
-				<div class="colCars">
-					<div class="colCar" id="B0UNC3">
-						<p class="colCarName">Sabre Turbo Pers.</p>
-						<p class="colCarPlate">B0UNC3</p>
-						<img class="colCarImage" src="image/car/sabreturbopers.jpg">
-					</div>
-					<div class="colCar" id="CH4RG3D">
-						<p class="colCarName">Tampa</p>
-						<p class="colCarPlate">CH4RG3D</p>
-						<img class="colCarImage" src="image/car/tampa.jpg">
-					</div>
-					<div class="colCar" id="BLKM4MB4">
-						<p class="colCarName">Mamba</p>
-						<p class="colCarPlate">BLKM4MB4</p>
-						<img class="colCarImage" src="image/car/mamba.jpg">
-					</div>
-				</div>
-			</div>
-
-			<div class="collection">
-				<p class="colTitle">Metal leve</p>
-				<p class="colBuyer">Ronnie Bonelli</p>
-				<p class="colBonuses">$50,000</p>
-				<div class="colCars">
-					<div class="colCar" id="V1S10NRY">
-						<p class="colCarName">Alpha</p>
-						<p class="colCarPlate">V1S10NRY</p>
-						<img class="colCarImage" src="image/car/alpha.jpg">
-					</div>
-					<div class="colCar" id="D34TH4U">
-						<p class="colCarName">Reaper</p>
-						<p class="colCarPlate">D34TH4U</p>
-						<img class="colCarImage" src="image/car/reaper.jpg">
-					</div>
-					<div class="colCar" id="B055">
-						<p class="colCarName">Massacro</p>
-						<p class="colCarPlate">B055</p>
-						<img class="colCarImage" src="image/car/massacro.jpg">
-					</div>
-					<div class="colCar" id="W1NN1NG">
-						<p class="colCarName">Zentorno</p>
-						<p class="colCarPlate">W1NN1NG</p>
-						<img class="colCarImage" src="image/car/zentorno.jpg">
-					</div>
-				</div>
-			</div>
-
-			<div class="collection">
-				<p class="colTitle">Fosca Tosca</p>
-				<p class="colBuyer">Cloe Parker</p>
-				<p class="colBonuses">$35,000</p>
-				<div class="colCars">
-					<div class="colCar" id="T0PL3SS">
-						<p class="colCarName">Coquette Clássico</p>
-						<p class="colCarPlate">T0PL3SS</p>
-						<img class="colCarImage" src="image/car/coquetteclassico.jpg">
-					</div>
-					<div class="colCar" id="PR3C10US">
-						<p class="colCarName">Verlierer</p>
-						<p class="colCarPlate">PR3C10US</p>
-						<img class="colCarImage" src="image/car/verlierer.jpg">
-					</div>
-					<div class="colCar" id="PR3TTY">
-						<p class="colCarName">ETR1</p>
-						<p class="colCarPlate">PR3TTY</p>
-						<img class="colCarImage" src="image/car/etr1.jpg">
-					</div>
-				</div>
-			</div>
-
-			<div class="collection">
-				<p class="colTitle">Quadradão</p>
-				<p class="colBuyer">Tao Cheng</p>
-				<p class="colBonuses">$50,000</p>
-				<div class="colCars">
-					<div class="colCar" id="W1D3B0D">
-						<p class="colCarName">Omnis</p>
-						<p class="colCarPlate">W1D3B0D</p>
-						<img class="colCarImage" src="image/car/omnis.jpg">
-					</div>
-					<div class="colCar" id="1985">
-						<p class="colCarName">Tropos Rallye</p>
-						<p class="colCarPlate">1985</p>
-						<img class="colCarImage" src="image/car/troposrallye.jpg">
-					</div>
-					<div class="colCar" id="NOF00L">
-						<p class="colCarName">Jester</p>
-						<p class="colCarPlate">NOF00L</p>
-						<img class="colCarImage" src="image/car/jester.jpg">
-					</div>
-					<div class="colCar" id="SN0WFLK3">
-						<p class="colCarName">Sultan RS</p>
-						<p class="colCarPlate">SN0WFLK3</p>
-						<img class="colCarImage" src="image/car/sultanrs.jpg">
-					</div>
-				</div>
-			</div>
-
-			<div class="collection">
-				<p class="colTitle">Tons de Azul</p>
-				<p class="colBuyer">Cris Formage</p>
-				<p class="colBonuses">$50,000</p>
-				<div class="colCars">
-					<div class="colCar" id="DR1FT3R">
-						<p class="colCarName">Banshee 900R</p>
-						<p class="colCarPlate">DR1FT3R</p>
-						<img class="colCarImage" src="image/car/banshee900r.jpg">
-					</div>
-					<div class="colCar" id="R4LLY">
-						<p class="colCarName">Stirling GT</p>
-						<p class="colCarPlate">R4LLY</p>
-						<img class="colCarImage" src="image/car/stirlinggt.jpg">
-					</div>
-					<div class="colCar" id="4LLOY5">
-						<p class="colCarName">Seven-70</p>
-						<p class="colCarPlate">4LLOYS</p>
-						<img class="colCarImage" src="image/car/seven-70.jpg">
-					</div>
-					<div class="colCar" id="TPD4WG">
-						<p class="colCarName">Turismo R</p>
-						<p class="colCarPlate">TPD4WG</p>
-						<img class="colCarImage" src="image/car/turismor.jpg">
-					</div>
-				</div>
-			</div>
-
-			<div class="collection">
-				<p class="colTitle">Queda de Impérios</p>
-				<p class="colBuyer">O Sultão de Amir</p>
-				<p class="colBonuses">$20,000</p>
-				<div class="colCars">
-					<div class="colCar" id="B1GM0N3Y">
-						<p class="colCarName">Z-Type</p>
-						<p class="colCarPlate">B1GM0N3Y</p>
-						<img class="colCarImage" src="image/car/z-type.jpg">
-					</div>
-					<div class="colCar" id="0LDT1M3R">
-						<p class="colCarName">Roosevelt Valor</p>
-						<p class="colCarPlate">0LDT1M3R</p>
-						<img class="colCarImage" src="image/car/rooseveltvalor.jpg">
-					</div>
-				</div>
-			</div>
+		<div id="menu">
+			<p class="mText">Made by Daniel Mendes</p>
+			<p class="mLink" onclick="go('https://gta.wikia.com/')">Images from GTA Wikia</p>
+			<p class="mLink" onclick="go('http://optimizilla.com/')">Optimized by Optimizilla</p>
+			<p class="mLink" onclick="go('http://pt.bloggif.com/')">Resized in Bloggif</p>
+			<p class="mLink" onclick="go('https://github.com/iDnlSM/GTAVO-Car-Collections')">Hosted on GitHub</p>
 		</div>
-		<footer>
-			<p class="fText">Daniel Mendes - iDnlSM - GTA V - FOK Brothers</p>
-			<p class="fText">
-				Imagens de <a href="http://gta.wikia.com/" target="_blank">GTA Wikia</a>
-				otimizadas por <a href="http://optimizilla.com/" target="_blank">Optimizilla</a>
-				redimencionadas em <a href="http://pt.bloggif.com/" target="_blank">Bloggif</a>
-			</p>
-		</footer>
+		<div id="mainContainer">
+		</div>
 	</body>
 </html>
-<link rel="stylesheet" href="style/font.css">
-<link rel="stylesheet" href="style/desktop.css" media="screen and (min-width: 768px)">
-<link rel="stylesheet" href="style/mobile.css" media="screen and (max-width: 767px)">
